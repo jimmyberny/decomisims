@@ -39,7 +39,7 @@ public class Home extends javax.swing.JPanel implements Vista {
         ogGenerales.init(app);
         
         // Contenido
-        cConceptos.init(app, ogGenerales);
+        conceptos.init(app, ogGenerales);
     }
 
     @Override
@@ -61,8 +61,9 @@ public class Home extends javax.swing.JPanel implements Vista {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        cConceptos = new org.decomisims.vistas.Conceptos();
+        jtpMain = new javax.swing.JTabbedPane();
+        jpConceptos = new javax.swing.JPanel();
+        conceptos = new org.decomisims.vistas.Conceptos();
         jspConceptos = new javax.swing.JScrollPane();
         jepContenido = new javax.swing.JEditorPane();
         jspVariables = new javax.swing.JScrollPane();
@@ -71,30 +72,35 @@ public class Home extends javax.swing.JPanel implements Vista {
 
         setLayout(new java.awt.BorderLayout());
 
-        jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
-        jTabbedPane1.addTab("Decomisims", cConceptos);
+        jtpMain.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+
+        jpConceptos.setLayout(new java.awt.BorderLayout());
+        jpConceptos.add(conceptos, java.awt.BorderLayout.CENTER);
+
+        jtpMain.addTab("tab4", jpConceptos);
 
         jepContenido.setEditable(false);
         jspConceptos.setViewportView(jepContenido);
 
-        jTabbedPane1.addTab("Conceptos", jspConceptos);
+        jtpMain.addTab("Conceptos", jspConceptos);
 
         jspVariables.setViewportView(jepVariables);
 
-        jTabbedPane1.addTab("Variables", jspVariables);
+        jtpMain.addTab("Variables", jspVariables);
 
-        add(jTabbedPane1, java.awt.BorderLayout.CENTER);
+        add(jtpMain, java.awt.BorderLayout.CENTER);
         add(ogGenerales, java.awt.BorderLayout.LINE_END);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private org.decomisims.vistas.Conceptos cConceptos;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private org.decomisims.vistas.Conceptos conceptos;
     private javax.swing.JEditorPane jepContenido;
     private javax.swing.JEditorPane jepVariables;
+    private javax.swing.JPanel jpConceptos;
     private javax.swing.JScrollPane jspConceptos;
     private javax.swing.JScrollPane jspVariables;
+    private javax.swing.JTabbedPane jtpMain;
     private org.decomisims.vistas.OpcionesGenerales ogGenerales;
     // End of variables declaration//GEN-END:variables
 }
