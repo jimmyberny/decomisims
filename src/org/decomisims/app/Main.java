@@ -151,10 +151,6 @@ public class Main extends javax.swing.JFrame implements Aplicacion {
     private void initComponents() {
 
         jpPrincipal = new javax.swing.JPanel();
-        jmbMenu = new javax.swing.JMenuBar();
-        jmArchivo = new javax.swing.JMenu();
-        jmiEscalaISR = new javax.swing.JMenuItem();
-        jmAcerca = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("org/decomisims/locales/lang"); // NOI18N
@@ -165,35 +161,10 @@ public class Main extends javax.swing.JFrame implements Aplicacion {
         jpPrincipal.setLayout(new java.awt.CardLayout());
         getContentPane().add(jpPrincipal, java.awt.BorderLayout.CENTER);
 
-        jmArchivo.setText(bundle.getString("lbl.archivo")); // NOI18N
-
-        jmiEscalaISR.setText("Escala de I.S.R.");
-        jmiEscalaISR.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmiEscalaISRActionPerformed(evt);
-            }
-        });
-        jmArchivo.add(jmiEscalaISR);
-
-        jmbMenu.add(jmArchivo);
-
-        jmAcerca.setText(bundle.getString("lblAcercaDe")); // NOI18N
-        jmbMenu.add(jmAcerca);
-
-        setJMenuBar(jmbMenu);
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jmiEscalaISRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiEscalaISRActionPerformed
-        mostrarTarea("org.decomisims.vistas.EscalaISRVista");
-    }//GEN-LAST:event_jmiEscalaISRActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jmAcerca;
-    private javax.swing.JMenu jmArchivo;
-    private javax.swing.JMenuBar jmbMenu;
-    private javax.swing.JMenuItem jmiEscalaISR;
     private javax.swing.JPanel jpPrincipal;
     // End of variables declaration//GEN-END:variables
 
